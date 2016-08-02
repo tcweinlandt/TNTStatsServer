@@ -1,0 +1,37 @@
+
+<%= form_for(@match) do |f| %>
+  <ul>
+  <% @match.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :winner_name %><br />
+    <%= f.text_field :winner_name %>
+  </p>
+  <p>
+    <%= f.label :winner_id %><br />
+    <%= f.text_field :winner_id %>
+  </p>
+  <p>
+    <%= f.label :winner_picks %><br />
+    <%= f.text_field :winner_picks %>
+  </p>
+  <p>
+    <%= f.label :loser_name %><br />
+    <%= f.text_field :loser_name %>
+  </p>
+
+  <p>
+    <%= f.label :loser_id %><br />
+    <%= f.text_field :loser_id %>
+  </p>  
+  <p>
+    <%= f.label :loser_picks %><br />
+    <%= f.text_field :loser_picks %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

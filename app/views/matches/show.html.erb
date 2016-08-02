@@ -1,0 +1,13 @@
+<h1><%= @match.match_name%> </h1>
+
+<p><%= link_to @match.winner_name, player_path(@match.players[0]) %> <br />using <%= @match.winner_pick_string %>
+
+
+
+
+<br /> beat </p>
+<p><%= link_to @match.loser_name, player_path(@match.players[1]) %><br /> using <%= @match.loser_pick_string %></p><br />
+<p><%= @match.created_at %></p><br /><br />
+<%= link_to "<< Back to Matches List", matches_path %> <br />
+<%= link_to "Delete", match_path(@match), method: :delete %><br />
+<%= link_to "Edit", edit_match_path(@match) %>

@@ -1,0 +1,11 @@
+<h1>All Matches</h1>
+
+<u1 id="matches">
+  <% @matches.each do |match| %>
+    <li>
+      <%= link_to match.match_name, match_path(match) %> 
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Submit a New Match", new_match_path, class: "new_match" %>

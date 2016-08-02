@@ -1,0 +1,15 @@
+<h1><%= @player.name %></h1>
+<p>Steam ID <%= @player.steamid %></p><br />
+<p>ELO <%= @player.elo %></p><br />
+<ul>
+  Matches:
+  <% @player.matches.each do |match| %>
+  <li><%= link_to match.match_name, match_path(match) %></li>
+  <% end %>
+</ul>
+
+<br />
+<br />
+
+<%= link_to "<< Back to Players List", players_path %> <br />
+<%= link_to "Delete", player_path(@player), method: :delete %>
